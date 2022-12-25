@@ -1,0 +1,46 @@
+/* BMI */
+* {
+    font-family: sans-serif;
+}
+
+#bmi {
+    margin: 50px;
+    padding: 20px;
+    border: 2px solid rgb(180, 180, 180);
+    border-radius: 4px;
+}
+
+#bmi>h2{
+    margin-top: 0px;
+}
+
+#info {
+    display: flex;
+    justify-content: space-around;
+}
+
+#info div {
+    width: 70%;
+    text-align: left;
+}
+
+#bottom>div{
+    margin-top: 20px;
+}
+
+#info+p {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.input {
+    width: 95%;
+    height: 30px;
+    padding-left: 10px;
+    border: 2px solid rgb(148, 148, 148);
+    border-radius: 5px;
+}
+
+#display {
+    margin-top: 20px;
+}

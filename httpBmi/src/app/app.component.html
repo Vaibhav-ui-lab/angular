@@ -1,0 +1,54 @@
+<form id="bmi" >
+  <h2>Body Mass Index</h2>
+  <p><b>Body Mass Index (BMI)</b> is a measure of the amount of fat in a human body. It is a single numeric value with
+      the following interpretation:</p>
+  <div id="info">
+      <div id="left">
+          <p><b>Underweight</b></p>
+          <p><b>Normal</b></p>
+          <p><b>Overweight</b></p>
+          <p><b>Over 30</b></p>
+      </div>
+      <div id="right">
+          <p>Less than 18</p>
+          <p>18-25</p>
+          <p>25-30</p>
+          <p>More than 30</p>
+      </div>
+  </div>
+  <p>Use the calculator below to calculate your BMI.</p>
+  
+  <div id="bottom">
+      <div>
+        <label><b>Height</b></label>
+        <div>
+            <input autofocus class="input" name="height" type="number" [(ngModel)]="height" placeholder="{{heightUnit}}">
+        </div>
+      </div>
+      <div>
+        <select class="Sys" name="heightUnit" [(ngModel)]="heightUnit">
+          <option *ngFor="let val of heightData">{{val}}</option>
+        </select>
+      </div>
+      <div>
+        <label><b>Weight</b></label>
+        <div>
+            <input class="input" name="weight" type="number" [(ngModel)]="weight" placeholder="{{weightUnit}}">
+        </div>
+      </div>
+      <div>
+        <select class="Sys" name="weightUnit" [(ngModel)]="weightUnit">
+          <option *ngFor="let val of weightData">{{val}}</option>
+        </select>
+      </div>
+      <div>
+        <label><b>BMI</b></label>
+        <div>
+            <input id="display" class="input" placeholder="BMI" name="bmi" type="text" readonly [ngModel]="bmi">
+        </div>
+      </div>
+      <div>
+        <input id="button" type="submit" value="Calculate" (click)="onCalc()">
+      </div>
+  </div>
+</form>

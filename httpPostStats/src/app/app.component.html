@@ -1,0 +1,36 @@
+<div id="container">
+  <h4 id="top">Package</h4>
+  <div>
+      <h4>Length</h4>
+      <input autofocus type="number" name="length" autofocus [(ngModel)]="length">
+  </div>
+  <div>
+      <h4>Width</h4>
+      <input type="number" name="width" [(ngModel)]="width">
+  </div>
+  <div>
+      <h4>Height</h4>
+      <input type="number" name="height" [(ngModel)]="height">
+  </div>
+  <div>
+      <h4>Longest side</h4>
+      <input type="text" class="input" name="long" [ngModel]="long" readonly>
+  </div>
+  <div>
+      <h4>Second-longest side</h4>
+      <input type="text" class="input" name="secLong" [ngModel]="secLong" readonly>
+  </div>
+  <div>
+      <h4>Shortest side</h4>
+      <input type="text" class="input" name="short" [ngModel]="short" readonly>
+  </div>
+  <div>
+      <h4>Girth</h4>
+      <input type="text" class="input" name="girth" [ngModel]="girth" readonly>
+  </div>
+  <div>
+      <h4>Volume</h4>
+      <input type="text" class="input" name="volume" [ngModel]="volume" readonly>
+  </div>
+  <button (click)="onClick()">Calculate</button>
+</div>

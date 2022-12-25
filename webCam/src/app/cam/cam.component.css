@@ -1,0 +1,100 @@
+*{
+    font-family: sans-serif;
+}
+
+#container{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+img{
+    border-radius: 10px;
+}
+
+.cam{
+    padding: 50px;
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: rgb(250, 187, 179); */
+    border-radius: 50px;
+}
+
+#result{
+    text-align: center;
+}
+
+.button{
+    margin: 10px;
+    justify-content: space-between;
+}
+
+button{
+    border: 0;
+    height: 40px;
+    width: 100px;
+    font-size: larger;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    background-color: rgb(65, 58, 58);
+    color: white;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button:active{
+    background-color: rgb(102, 70, 31);
+}
+
+table,tr,td,th{
+    border: 2px solid black;
+    border-collapse: collapse;
+    font-size: large;
+    padding: 30px;
+}
+
+@media screen and (max-width: 680px) {
+    #container{
+        flex-direction: column;
+    }
+
+    .cam{
+        margin: 50px;
+        padding: 50px;
+        height: 300px;
+    }
+
+    div{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    #container{
+        flex-direction: column;
+    }
+
+    .cam{
+        /* margin: 50px; */
+        /* padding: 50px; */
+        margin: 0px;
+        width: 260px;
+        height: 300px;
+    }
+
+    div{
+        margin-top: 20px;
+    }
+
+    button{
+        height: 30px;
+        width: 80px;
+    }
+}

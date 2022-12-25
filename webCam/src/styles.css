@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+.webcam-wrapper, .webcam-wrapper video{
+    /* width: 90%; */
+    /* margin: auto; */
+    /* height: 50%; */
+    border-radius: 10px;
+}

@@ -1,0 +1,38 @@
+<div id="container">
+    <div class="cam" *ngIf="getImg()==''">
+        <webcam
+        [width] = "349"
+        [height]= "262"
+        [trigger]="invokeObservable"
+        (imageCapture)="captureImg($event)"
+        [mirrorImage]="'never'"
+        ></webcam>
+        <div class="button">
+            <button (click)="getSnapshot()">Capture</button>
+        </div>
+    </div>
+    <div class="cam" *ngIf="getImg()!=''">
+        <img [src]="getImg()" height="262" width="349" />
+        <div class="button">
+            <button (click)="clearImg()">Retake</button>
+            <button (click)="sendImg()">Send</button>   
+        </div>
+    </div>
+    <div id="result">
+        <h1>Result</h1>
+        <table>
+        <tr>
+          <th>Gender</th>
+          <td>{{gender}}</td>
+        </tr>
+        <tr>
+          <th>Hair Colour</th>
+          <td>{{hairColour}}</td>
+        </tr>
+        <tr>
+          <th>Eye Colour</th>
+          <td>{{eyeColour}}</td>
+        </tr>
+      </table>
+    </div>
+</div>

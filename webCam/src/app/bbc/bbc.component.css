@@ -1,0 +1,66 @@
+#navbar{
+    height: 64px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+}
+
+#navbar>img{
+    height: 30px;
+}
+
+.bar{
+    height: 40%;
+    border: 1px solid white;
+}
+
+#left{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#left p{
+    font-size: small;
+    font-weight: 700;
+    margin: 10px;
+}
+
+#left p:hover{
+    color: aqua;
+    cursor: pointer;
+}
+
+#page{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    width: 100%;
+    opacity: 1;
+}
+
+section h2{
+    text-align: right;
+    color: #8c8c8c;
+    font-weight: lighter;
+}
+
+section span{
+    float: left;
+    color: #4a4a4a;
+    font-weight: bold;
+}
+
+#page>img{
+    width: 100%;
+}

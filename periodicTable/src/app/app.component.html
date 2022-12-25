@@ -1,0 +1,51 @@
+<p id="nav">Periodic Table of Elements</p>
+<div id="container">
+  <form [formGroup]="dataGroup" (ngSubmit)="onAdd()">
+    <h2>New Element</h2><hr>
+    <div id="input">
+      <div id="left">
+        <input autofocus formControlName="atomicNo" class="fill" type="number" placeholder="Atomic Number">
+        <div *ngIf="dataGroup.controls['atomicNo'].errors" class="alert">
+          Atomic number should be whole number.
+        </div>
+        <input formControlName="name" class="fill" type="text" placeholder="Name">
+        <div *ngIf="dataGroup.controls['name'].errors" class="alert">
+          Should have alphabets only & first character in uppercase.
+        </div>
+        <button type="reset" class="button">Reset</button>
+      </div>
+      <div id="right">
+        <input formControlName="symbol" class="fill" type="text" placeholder="Symbol">
+        <div *ngIf="dataGroup.controls['symbol'].errors" class="alert">
+          Should have atmost 2 characters only, first character in uppercase & second in lowercase.
+        </div>
+        <input formControlName="atomicWt" class="fill" type="number" placeholder="Atomic Weight">
+        <div *ngIf="dataGroup.controls['atomicWt'].errors" class="alert">
+          Atomic weight should be atmost 4 decimals.
+        </div>
+        <button type="submit" id="add" class="button" [disabled]="!dataGroup.valid">Add</button>
+      </div>
+    </div>
+  </form>
+  <div id="backend">
+    <p id="elements">Elements available: {{elementNo}}</p>
+    <table>
+      <thead>
+        <tr>
+          <td>Atomic Number</td>
+          <td>Chemical Symbol</td>
+          <td>Chemical Name</td>
+          <td>Atomic Weight</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of sort(elementData)">
+          <td>{{row["atomicNumber"]}}</td>
+          <td>{{row["symbol"]}}</td>
+          <td>{{row["name"]}}</td>
+          <td>{{row["atomicWeight"]}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

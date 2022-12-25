@@ -1,0 +1,54 @@
+<form id="bmi" >
+  <h2>Body Mass Index</h2>
+  <p><b>Body Mass Index (BMI)</b> is a measure of the amount of fat in a human body. It is a single numeric value with
+      the following interpretation:</p>
+  <div id="info">
+      <div id="left">
+          <p><b>Underweight</b></p>
+          <p><b>Normal</b></p>
+          <p><b>Overweight</b></p>
+          <p><b>Over 30</b></p>
+      </div>
+      <div id="right">
+          <p>Less than 18</p>
+          <p>18-25</p>
+          <p>25-30</p>
+          <p>More than 30</p>
+      </div>
+  </div>
+  <p>Use the calculator below to calculate your BMI.</p>
+  
+  <div id="bottom">
+      <div>
+        <select id="Sys" name="measureSys" [(ngModel)]="measureSys">
+          <option value="imperial">Imperial</option>
+          <option value="metric">Metric</option>
+        </select>
+      </div>
+      <div>
+        <label><b>Height</b></label>
+        <div *ngIf="(measureSys=='metric')">
+            <input autofocus (ngModel)="heightUnit" class="input" placeholder={{heightUnit}} name="height" type="number" [(ngModel)]="height" >
+        </div>
+        <div id="height" *ngIf="(measureSys=='imperial')">
+          <input autofocus (ngModel)="heightUnit" class="input" placeholder={{heightFeet}} name="feet" type="number" [(ngModel)]="feet" >
+          <input (ngModel)="heightUnit" class="input" placeholder={{heightUnit}} name="height" type="number" [(ngModel)]="height" >
+        </div>
+      </div>
+      <div>
+        <label><b>Weight</b></label>
+        <div>
+            <input (ngModel)="weightUnit" class="input" placeholder={{weightUnit}} name="weight" type="number" [(ngModel)]="weight">
+        </div>
+      </div>
+      <div>
+        <label><b>BMI</b></label>
+        <div>
+            <input class="input" placeholder="bmi" name="bmi" type="text" readonly [ngModel]="bmi">
+        </div>
+      </div>
+      <div>
+        <input id="button" type="submit" value="Calculate" (click)="onCalc()">
+      </div>
+  </div>
+</form>

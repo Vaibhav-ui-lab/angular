@@ -1,0 +1,13 @@
+<div id="nav">
+  <p>Periodic Table of Elements</p>
+  <div *ngIf="isLogin()">
+    <p>Hello, {{getU()}}</p>
+    <img (click)="logout()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWxZnizfNc_z9ltxqgW2BUfl1BTtDQ3FOWIQ&usqp=CAU" alt="Log out">
+  </div>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+
+
