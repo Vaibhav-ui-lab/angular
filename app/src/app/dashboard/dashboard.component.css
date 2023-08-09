@@ -1,0 +1,147 @@
+#nav{
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    background-color: black;
+}
+
+#container{
+    display: flex;
+    margin: 30px;
+    height: 500px;
+    justify-content: space-evenly;
+}
+
+form{
+    width: 45%;
+}
+
+#backend{
+    width: 45%;
+    margin-right: 30px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+h2{
+    margin-bottom: 10px;
+}
+
+#input{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#left{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+#right{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: flex-end;
+}
+
+form input{
+    width: 90%;
+}
+
+.fill{
+    height: 20px;
+    margin: 5px;
+    padding-left: 5px;
+}
+
+.button{
+    height: 30px;
+    width: 70px;
+    margin: 5px;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.button:hover{
+    background-color: rgb(139, 139, 139);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.button:active{
+    background-color: rgb(51, 51, 51);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.button:disabled{
+    cursor: not-allowed;
+    background-color: rgb(143, 143, 143);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+table{
+    color: white;
+    width: 100%;
+    font-size: small;
+    background-color: black;
+    border-collapse: collapse;
+}
+
+td{
+    padding: 5px;
+    border: 1px solid white;
+    border-left: none;
+    border-right: none;
+}
+
+#elements{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    background-color: rgb(197, 197, 197);
+}
+
+.alert{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(255, 227, 227);
+    border-radius: 5px;
+    font-size: 10px;
+    color: red;
+}
+
+@media screen and (max-width: 800px) {
+    #container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form,#backend{
+        width: 90%;
+    }
+
+    #backend{
+        /* margin-top: 50px; */
+        margin-right: 0px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    #nav{
+        margin-bottom: 30px;
+    }
+
+    #container{
+        margin: auto;
+    }
+
+}

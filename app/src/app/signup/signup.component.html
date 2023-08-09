@@ -1,0 +1,30 @@
+<div id="container">
+    <form [formGroup]="signForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="username"><b>Username</b></label>
+            <input (click)="onClickName()" formControlName="username" id="username" type="text" autofocus="autofocus">
+            <div *ngIf="signForm.controls['username'].errors" class="alert">
+                {{signForm.controls['username'].errors['userInvalid'].message}}
+            </div>
+            <div *ngIf="getNameAlert() != ''" class="alert">
+                {{getNameAlert()}}
+            </div>
+        </div>
+  
+        <div>
+            <label for="password"><b>Password</b></label>
+            <input (click)="onClickPwd()" formControlName="password" id="password" type="password">
+            <div *ngIf="signForm.controls['password'].errors" class="alert">
+                {{signForm.controls['password'].errors['passwordInvalid'].message}}
+            </div>
+            <div *ngIf="getPwdAlert() != ''" class="alert">
+                {{getPwdAlert()}}
+            </div>
+        </div>
+  
+        <div id="login">
+            <a [routerLink]='["/login"]' routerLinkActive="active" href="">Log in</a>
+            <button type="submit" [disabled]="!signForm.valid">Sign up</button>
+        </div>
+    </form>
+</div>
